@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+// src/styles.scss
+@use "tailwindcss";
+
+$theme-color: #e03a3c;
+
+.text-custom-red {
+    color: $theme-color;
+}
+
+.bg-red {
+    background-color: $theme-color;
+}
+
+.hover-text :hover {
+    color: $theme-color;
+}
