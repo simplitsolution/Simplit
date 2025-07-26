@@ -1,1 +1,35 @@
-<p>expertise works!</p>
+<div class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Expertise</h2>
+    <p class="text-gray-600 mb-10">
+      Specializing in a select range of services, our team offers unrivaled expertise and unwavering commitment to deliver exceptional quality.
+    </p>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <div
+  *ngFor="let card of serviceCards; let i = index"
+  [ngStyle]="{ 'animation-delay': (i * 0.5) + 's' }"
+  class="bg-white shadow-lg rounded-xl p-6 transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl fade-in-up"
+>
+
+        <div class="mb-4">
+          <img [src]="card.image" [alt]="card.alt" class="w-10 h-10 hover:scale-110 transition-transform duration-300" />
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ card.title }}</h3>
+        <p class="text-gray-600 mb-4">{{ card.description }}</p>
+        <a [href]="card.link" class="text-blue-600 font-medium hover:underline flex items-center group">
+          Read more
+          <svg
+            class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
