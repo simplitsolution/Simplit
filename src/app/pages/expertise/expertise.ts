@@ -1,34 +1,81 @@
+import { Component, ElementRef, AfterViewInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-expertise',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule,RouterModule],
   templateUrl: './expertise.html',
   styleUrl: './expertise.scss'
 })
-export class Expertise {
-  serviceCards = [
-    {
-      title: 'CMS Development',
-      description: 'Tailored Drupal and WordPress solutions, crafting powerful, user-friendly websites for an impactful online presence.',
-      image: 'assets/images/cms-icon.svg',
-      alt: 'CMS Icon',
-      link: '#'
-    },
-    {
-      title: 'MVP Development',
-      description: 'Empowering startups with scalable MVPs for rapid market entry using advanced tech.',
-      image: 'assets/images/MVP-development-service-icon.svg',
-      alt: 'MVP Icon',
-      link: '#'
-    },
-    {
-      title: 'Data and Analytics',
-      description: 'Transform raw data into actionable insights with our Data & Analytics services.',
-      image: 'assets/images/web-development.svg',
-      alt: 'Analytics Icon',
-      link: '#'
+export class Expertise implements AfterViewInit {
+  isVisible = signal(false);
+
+ serviceCards = [
+  {
+    title: 'Mobile App Development',
+    icon: '../../../assets/images/mobile-development.svg',
+    sections: [
+      {
+        heading: 'Native App Development',
+        items: ['iOS Application Development', 'Android Application Development', 'Tizen Application Development']
+      },
+      {
+        heading: 'Hybrid App Development',
+        items: ['Flutter Application Development', 'React Native Application Development']
+      }
+    ],
+    link: '#',
+  },
+  {
+    title: 'Web Development',
+    icon: '../../../assets/images/web-development.svg',
+    sections: [
+      {
+        heading: 'Backend Development',
+        items: ['Node JS, Mongo-DB', 'Java Web Development', 'PHP/Laravel, MySQL']
+      },
+      {
+        heading: 'Front End Development',
+        items: ['HTML/CSS/JavaScript', 'Angular, React, Vue']
+      }
+    ],
+    link: '#',
+  },
+  {
+    title: 'SEO & Digital Marketing',
+    icon: '../../../assets/images/MVP-development-service-icon.svg',
+    sections: [
+      {
+        heading: 'SEO',
+        items: ['On Page SEO', 'Off Page SEO', 'Website Optimization']
+      },
+      {
+        heading: 'Digital Marketing',
+        items: ['Social Media Marketing', 'Blog Submission']
+      }
+    ],
+    link: '#'
+  }
+];
+
+
+
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit() {
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            this.isVisible.set(entry.isIntersecting);
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(this.el.nativeElement);
     }
-  ];
+  }
 }

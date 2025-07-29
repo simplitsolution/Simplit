@@ -1,22 +1,24 @@
 <app-header></app-header>
+{{sectionVisibility| json}}
 
 <router-outlet></router-outlet>
-<section id="home">
-  <app-home />
+<section id="home" #section>
+
+    <app-home />
 </section>
 
-<section id="expertise">
-  <app-expertise />
-</section>
-
-<section id="about" class="h-[700px]">
+<section id="about" #section class="h-[700px]">
   <app-about />
 </section>
 
-<section id="contact" class="h-[700px]">
-  <app-contact />
+<section id="expertise" #section>
+    <app-expertise />
 </section>
 
-<section id="careers"  class="h-[700px]">
-  <app-careers />
+<section id="contact" #section class="h-[700px]">
+    <app-contact />
+</section>
+
+<section id="careers" #section class="h-[700px]">
+    <app-careers />
 </section>
