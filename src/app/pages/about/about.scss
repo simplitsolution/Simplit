@@ -1,0 +1,23 @@
+.black-overlay {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 60px);
+  background-color: #111;
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  transition: all 300ms ease-in-out;
+  clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+}
+
+.card:hover .black-overlay {
+  opacity: 0.9;
+}
+.content-wrap {
+position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    bottom: 0;
+    color: #fff;
+}

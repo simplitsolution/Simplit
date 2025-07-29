@@ -68,3 +68,26 @@ export const serviceCardsDetail = [
     link: '#'
   }
 ];
+
+export const aboutCardDetails = [
+    {
+      title: 'Accountability',
+      imgSrc: '../../../assets/images/account.webp',
+      description: '',
+    },
+    {
+      title: 'Freedom',
+      imgSrc: '../../../assets/images/freedom.webp',
+      description: '',
+    },
+    {
+      title: 'Happiness',
+      imgSrc: '../../../assets/images/happiness.webp',
+      description: '',
+    },
+    {
+      title: 'Respect',
+      imgSrc: '../../../assets/images/respect.jpg',
+      description: '',
+    },
+  ];
