@@ -14,7 +14,7 @@
     
         <nav class="hidden md:flex space-x-6 items-center hover-text text-sm text-gray-700">
           @for (item of navDetails; track $index) {
-            <a [routerLink]="item.link" class="font-medium">{{item.name}}</a>
+            <a [routerLink]="[item.link]" class="font-medium">{{item.name}}</a>
           }
         </nav>
       </div>
