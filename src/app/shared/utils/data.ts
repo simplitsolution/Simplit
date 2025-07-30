@@ -72,22 +72,22 @@ export const serviceCardsDetail = [
 export const aboutCardDetails = [
     {
       title: 'Accountability',
-      imgSrc: '../../../assets/images/account.webp',
-      description: '',
+      imgSrc: '../../../assets/images/accountability.avif',
+      description: 'We value freedom, and allowing our employees to work remotely gives them the freedom and flexibility they need to produce quality work.',
     },
     {
       title: 'Freedom',
       imgSrc: '../../../assets/images/freedom.webp',
-      description: '',
+      description: 'We value freedom, and allowing our employees to work remotely gives them the freedom and flexibility they need to produce quality work.',
     },
     {
       title: 'Happiness',
       imgSrc: '../../../assets/images/happiness.webp',
-      description: '',
+      description: 'We value freedom, and allowing our employees to work remotely gives them the freedom and flexibility they need to produce quality work.',
     },
     {
       title: 'Respect',
       imgSrc: '../../../assets/images/respect.jpg',
-      description: '',
+      description: 'We value freedom, and allowing our employees to work remotely gives them the freedom and flexibility they need to produce quality work.',
     },
   ];
