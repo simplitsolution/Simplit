@@ -72,22 +72,22 @@ export const serviceCardsDetail = [
 export const aboutCardDetails = [
     {
       title: 'Accountability',
-      imgSrc: '../../../assets/images/accountability.avif',
-      description: 'We value freedom, and allowing our employees to work remotely gives them the freedom and flexibility they need to produce quality work.',
+      imgSrc: 'assets/images/accountability.avif',
+      description: 'We stand behind our work by taking complete ownership of our actions and results, and we back our services with code warranty.',
     },
     {
       title: 'Freedom',
-      imgSrc: '../../../assets/images/freedom.webp',
-      description: 'We value freedom, and allowing our employees to work remotely gives them the freedom and flexibility they need to produce quality work.',
+      imgSrc: 'assets/images/freedom.webp',
+      description: 'We believe in empowering our team with the freedom to choose how and where they work. Remote work provides the flexibility that supports productivity, creativity, and high-quality results.',
     },
     {
       title: 'Happiness',
-      imgSrc: '../../../assets/images/happiness.webp',
-      description: 'We value freedom, and allowing our employees to work remotely gives them the freedom and flexibility they need to produce quality work.',
+      imgSrc: 'assets/images/happiness.webp',
+      description: 'We see happiness as a key driver of success. By fostering continuous learning and personal development through biannual upskilling, we create a positive environment where our team feels fulfilled, valued, and inspired to do their best work.',
     },
     {
       title: 'Respect',
-      imgSrc: '../../../assets/images/respect.jpg',
-      description: 'We value freedom, and allowing our employees to work remotely gives them the freedom and flexibility they need to produce quality work.',
+      imgSrc: 'assets/images/respect.jpg',
+      description: 'We are committed to fostering a respectful workplace where every individual is valued. Our culture embraces diversity, inclusion, and equality, ensuring a safe and supportive environment for all.',
     },
   ];
