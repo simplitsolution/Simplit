@@ -68,3 +68,25 @@ export const serviceCardsDetail = [
     link: '#'
   }
 ];
+export const contactCardDetail = [
+  {
+    title: 'Address',
+    icon: '../../../assets/images/address.svg',
+    items: [
+      '332 - Skyview Business Horizon',
+      'Surat - Kamrej Hwy, opp. Dreamland Party Plot',
+      'Surat, Gujarat 395006'
+    ]
+  },
+  {
+    title: 'Phone',
+    icon: '../../../assets/images/phone.svg',
+    items: ['+91 84605 50273']
+  },
+  {
+    title: 'Email',
+    icon: '../../../assets/images/gmail.svg',
+    items: ['hr@Simplit.com']
+  }
+];
+
