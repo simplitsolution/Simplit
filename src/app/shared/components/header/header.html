@@ -1,22 +1,54 @@
-<header class="bg-white shadow-md fixed w-full top-0 z-50">
-    <div class="container mx-auto px-10 ">
-      <div class="mx-auto px-4 py-4 flex justify-between items-center">
-        
-        <div class="flex items-center space-x-2">
-          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4" />
-          </svg>
-    
-          <span class="text-2xl font-bold text-gray-800 tracking-wide">Simplit</span>
-        </div>
-    
-        <nav class="hidden md:flex space-x-6 items-center hover-text text-sm text-gray-700">
-          @for (item of navDetails; track $index) {
-            <a [routerLink]="[item.link]" class="font-medium">{{item.name}}</a>
-          }
-        </nav>
+<header
+  class="fixed w-full top-0 z-50 transition-all duration-500"
+  [ngClass]="{
+    'bg-white shadow-md': isScrolled,
+    'bg-transparent': !isScrolled
+  }"
+>
+  <div class="container mx-auto px-10">
+    <div class="mx-auto px-4 py-4 flex justify-between items-center">
+
+      <!-- Logo -->
+      <div
+        class="flex items-center space-x-2 transition-all duration-500"
+        [ngClass]="{
+          'text-black': isScrolled,
+          'text-white': !isScrolled
+        }"
+      >
+        <svg
+          class="w-8 h-8 transition-all duration-500"
+          [ngClass]="{
+            'stroke-black': isScrolled,
+            'stroke-white': !isScrolled
+          }"
+          fill="none"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4"
+          />
+        </svg>
+        <span class="text-2xl font-bold tracking-wide">Simplit</span>
       </div>
+
+      <!-- Navigation -->
+      <nav
+        class="hidden md:flex space-x-6 items-center text-sm font-medium transition-all duration-500"
+        [ngClass]="{
+          'text-black': isScrolled,
+          'text-white': !isScrolled
+        }"
+      >
+        @for (item of navDetails; track $index) {
+          <a [routerLink]="[item.link]" class="hover:underline">{{
+            item.name
+          }}</a>
+        }
+      </nav>
+    </div>
   </div>
-  </header>
+</header>
