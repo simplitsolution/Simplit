@@ -28,3 +28,9 @@ $theme-color: #e03a3c;
 .bg-custom-gray{
  background-color: #353535;
 }
+
+@layer utilities {
+  .clip-path-slant {
+    clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+  }
+}
