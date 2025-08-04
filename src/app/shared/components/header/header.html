@@ -1,27 +1,11 @@
-<header
-  class="fixed w-full top-0 z-50 transition-all duration-500"
-  [ngClass]="{
-    'bg-white shadow-md': isScrolled,
-    'bg-transparent': !isScrolled
-  }"
->
+<header class="fixed w-full top-0 z-50 bg-white shadow-md">
   <div class="container mx-auto px-10">
     <div class="mx-auto px-4 py-4 flex justify-between items-center">
 
       <!-- Logo -->
-      <div
-        class="flex items-center space-x-2 transition-all duration-500"
-        [ngClass]="{
-          'text-black': isScrolled,
-          'text-white': !isScrolled
-        }"
-      >
+      <div class="flex items-center space-x-2 text-black">
         <svg
-          class="w-8 h-8 transition-all duration-500"
-          [ngClass]="{
-            'stroke-black': isScrolled,
-            'stroke-white': !isScrolled
-          }"
+          class="w-8 h-8 stroke-black"
           fill="none"
           stroke-width="2"
           viewBox="0 0 24 24"
@@ -36,19 +20,12 @@
       </div>
 
       <!-- Navigation -->
-      <nav
-        class="hidden md:flex space-x-6 items-center text-sm font-medium transition-all duration-500"
-        [ngClass]="{
-          'text-black': isScrolled,
-          'text-white': !isScrolled
-        }"
-      >
+      <nav class="hidden md:flex space-x-6 items-center text-sm font-medium text-black">
         @for (item of navDetails; track $index) {
-          <a [routerLink]="[item.link]" class="hover:underline">{{
-            item.name
-          }}</a>
+          <a [routerLink]="[item.link]" class="hover:underline">{{ item.name }}</a>
         }
       </nav>
+
     </div>
   </div>
 </header>

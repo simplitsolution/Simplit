@@ -33,18 +33,7 @@ import { navbarDetails } from '../../utils/data';
   styleUrls: ['./header.scss']
 })
 export class Header {
-  isScrolled = false;
-  navDetails: any = navbarDetails;
-  constructor(private cdr: ChangeDetectorRef) {}
-
-  // Detect scroll
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    this.isScrolled = scrollTop > 50;
-    this.cdr.detectChanges();
-
-  }
+   navDetails: any = navbarDetails;
 }
 
 
