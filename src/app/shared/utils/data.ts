@@ -90,4 +90,24 @@ export const aboutCardDetails = [
       imgSrc: 'assets/images/respect.jpg',
       description: 'We are committed to fostering a respectful workplace where every individual is valued. Our culture embraces diversity, inclusion, and equality, ensuring a safe and supportive environment for all.',
     },
-  ];
+    {
+    title: 'Transparency',
+    imgSrc: 'assets/images/transparency.jpg',
+    description: 'We promote open and honest communication at all levels, ensuring trust and integrity in everything we do.',
+  },
+  {
+    title: 'Collaboration',
+    imgSrc: 'assets/images/collaboration.webp',
+    description: 'We work as one team, valuing diverse perspectives and fostering partnerships for better outcomes.',
+  },
+  {
+    title: 'Innovation',
+    imgSrc: 'assets/images/innovation.webp',
+    description: 'We embrace change and encourage creative problem-solving to drive continuous improvement.',
+  },
+  {
+    title: 'Well-being',
+    imgSrc: 'assets/images/wellbeing.avif',
+    description: 'We prioritize our team’s physical and mental health through wellness programs and flexible schedules.',
+  }
+];
