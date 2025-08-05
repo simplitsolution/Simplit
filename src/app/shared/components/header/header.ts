@@ -1,25 +1,3 @@
-// old code
-
-// import { CommonModule } from '@angular/common';
-// import { Component } from '@angular/core';
-// import { RouterModule } from '@angular/router';
-// import { navbarDetails } from '../../utils/data';
-
-// @Component({
-//   selector: 'app-header',
-//   imports: [CommonModule, RouterModule],
-//   templateUrl: './header.html',
-//   styleUrl: './header.scss'
-// })
-// export class Header {
-
-//   navDetails: any = navbarDetails;
-  
-// }
-
-
-// its my new code
-
 import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -33,7 +11,12 @@ import { navbarDetails } from '../../utils/data';
   styleUrls: ['./header.scss']
 })
 export class Header {
-   navDetails: any = navbarDetails;
+  navDetails: any = navbarDetails;
+
+  // state to show/hide mobile menu
+  isMobileMenuOpen = false;
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 }
-
-
