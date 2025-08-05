@@ -1,6 +1,6 @@
-import { ChangeDetectorRef, Component, OnInit , NgZone, OnDestroy  } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit , NgZone, OnDestroy, Inject, PLATFORM_ID  } from '@angular/core';
 import { aboutCardDetails } from '../../shared/utils/data';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { trigger, transition, style, animate , state  } from '@angular/animations';
 
 @Component({
@@ -40,17 +40,20 @@ export class About implements OnInit, OnDestroy {
 
   readonly SLIDE_INTERVAL = 4000;
 
-  constructor(
-    private readonly cdr: ChangeDetectorRef,
-    private readonly ngZone: NgZone
-  ) {}
+constructor(
+  private readonly cdr: ChangeDetectorRef,
+  private readonly ngZone: NgZone,
+  @Inject(PLATFORM_ID) private platformId: Object
+) {}
+
 
   ngOnInit(): void {
-    this.containerElement = document.querySelector('.grid') as HTMLElement;
-
-    this.observeResize();
-    this.initializeCards();
-    this.startAutoSlide();
+    if (isPlatformBrowser(this.platformId)) {
+      this.containerElement = document.querySelector('.grid') as HTMLElement;
+      this.observeResize();
+      this.initializeCards();
+      this.startAutoSlide();
+    }
   }
 
   ngOnDestroy(): void {
