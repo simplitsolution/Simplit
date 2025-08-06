@@ -18,16 +18,20 @@
           </div>
           <h3 class="text-xl font-semibold text-center text-white mb-4">{{ card.title }}</h3>
 
-          <div *ngFor="let section of card.sections" class="mb-4">
-            <h4 class="text-md font-semibold text-white border-l-4 border-[#e03a3c] pl-2 mb-2">
-              {{ section.heading }}
-            </h4>
-            <ul class="text-gray-300 text-sm space-y-1 pl-4">
-              <li *ngFor="let item of section.items" class="flex items-start gap-2">
-                <span>&check;</span>
-                <span>{{ item }}</span>
-              </li>
-            </ul>
+          <div class="flex justify-center">
+            <div>
+              <div *ngFor="let section of card.sections" class="mb-4">
+              <h4 class="text-md font-semibold text-white border-l-4 border-[#e03a3c] pl-2 mb-2">
+                {{ section.heading }}
+              </h4>
+              <ul class="text-gray-300 text-sm space-y-1 pl-4">
+                <li *ngFor="let item of section.items" class="flex items-start gap-2">
+                  <span>&check;</span>
+                  <span>{{ item }}</span>
+                </li>
+              </ul>
+            </div>
+            </div>
           </div>
         </div>
 
