@@ -8,13 +8,14 @@ import { Contact } from '../pages/contact/contact';
 import { Expertise } from '../pages/expertise/expertise';
 import { Careers } from "../pages/careers/careers";
 import { CommonModule } from '@angular/common';
+import { Footer } from '../shared/components/footer/footer';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
   templateUrl: './layout.html',
   styleUrls: ['./layout.scss'],
-  imports: [Header, Home, About, Contact, Expertise, Careers, RouterModule, CommonModule]
+  imports: [Header, Home, About, Contact, Expertise, Careers, RouterModule, CommonModule, Footer]
 })
 export class Layout implements AfterViewInit {
 sectionVisibility:any = {
