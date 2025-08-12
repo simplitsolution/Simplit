@@ -133,3 +133,11 @@ export const contactCardDetail = [
   }
 ];
 
+export const perks = [
+    { icon: '🤝', title: 'Challenging Opportunities' },
+    { icon: '🎉', title: 'Celebration & Events' },
+    { icon: '👥', title: 'Employee Engagement' },
+    { icon: '🕒', title: 'Flexible Schedules' },
+    { icon: '💼', title: 'Work Life Balance' },
+    { icon: '💰', title: 'Industry Standard Pay' }
+  ];

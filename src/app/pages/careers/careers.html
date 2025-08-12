@@ -1,1 +1,47 @@
-<p>careers works!</p>
+<!-- Hero Section -->
+<section
+  class="bg-[url('/assets/images/career-bg.jpg')] bg-cover bg-center bg-no-repeat text-white py-20 clip-path-bottom-slant text-center"
+>
+ <h1 class="text-4xl font-bold">Shape Your Future</h1>
+<p class="mt-4 text-lg">Collaborate. Innovate. Elevate.</p>
+</section>
+
+
+<!-- Intro Section -->
+<section class="py-16 px-4 text-center">
+  <h2 class="text-2xl md:text-4xl font-bold mb-6">
+   Where ambition meets opportunity —
+    <span class="text-custom-red">your next career move starts here.</span>
+  </h2>
+  <p class="text-gray-600 max-w-3xl mx-auto">
+      At Simplit Solution Pvt Ltd, your talent fuels innovation. Work on cutting-edge projects that challenge and inspire you, while accelerating your personal and professional growth. 
+  Be part of a team where your contributions truly make a difference.
+  </p>
+</section>
+
+<!-- Perks Section -->
+<section class="relative bg-custom-gray text-white py-20 px-4 overflow-hidden" [@perkAnimation]="isVisible()">
+  <h3 class="text-3xl font-semibold text-center mb-12 relative z-10">Perks</h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto relative z-10">
+    @for (item of perkList; track $index) {
+    <div class="perk-card p-6 bg-[#2a2a2a] rounded-lg shadow hover-bg transition duration-300">
+      <span class="text-3xl">{{ item.icon }}</span>
+      <h4 class="text-xl font-semibold mt-4">{{ item.title }}</h4>
+    </div>
+
+    }
+  </div>
+</section>
+
+
+<!-- Call to Action Form -->
+<section class="py-16 px-4 bg-white text-center">
+  <h3 class="text-3xl font-semibold mb-4">Interested in joining us?</h3>
+  <p class="text-gray-600 mb-6">
+    We'd love to hear from you. Reach out to us and let's build something amazing together.
+  </p>
+  <p class="text-xl font-semibold text-custom-red">
+    📧 <a href="mailto:careers@Simplitsolution.com" class="hover-text underline">careers@Simplitsolution.com</a>
+  </p>
+</section>
