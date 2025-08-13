@@ -35,7 +35,7 @@ export const serviceCardsDetail = [
         items: ['Flutter Application Development', 'React Native Application Development']
       }
     ],
-    link: '#',
+    link: ['/services', 'mobile'],
   },
   {
     title: 'Web Development',
@@ -50,7 +50,7 @@ export const serviceCardsDetail = [
         items: ['HTML/CSS/JavaScript', 'Angular, React, Vue']
       }
     ],
-    link: '#',
+    link:  ['/services', 'web'],
   },
   {
     title: 'SEO & Digital Marketing',
@@ -65,7 +65,7 @@ export const serviceCardsDetail = [
         items: ['Social Media Marketing', 'Blog Submission']
       }
     ],
-    link: '#'
+    link: ['/services', 'seo']
   }
 ];
 
