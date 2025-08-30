@@ -11,6 +11,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideAnimations(),
-    provideRouter(routes), provideClientHydration(withEventReplay())
+    provideRouter(routes)
   ]
 };
