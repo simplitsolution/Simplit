@@ -50,9 +50,15 @@ ngAfterViewInit() {
 
     // Scroll after view init (to handle page reloads directly to route)
     setTimeout(() => {
-      const sectionId = this.router.url.replace('/', '');
+      let sectionId = this.router.url.replace('/', '');
+      if (!ids.includes(sectionId)) {
+        // If invalid, redirect to home route
+        sectionId = 'home';
+        this.router.navigate(['/home']);  // This will update the URL to /home
+      }
       const el = typeof document !== 'undefined' ? document.getElementById(sectionId) : null;
 
+      console.log('fesdfdxgdfhdd',el,sectionId);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       } else {
@@ -67,7 +73,7 @@ ngAfterViewInit() {
       if (event instanceof NavigationEnd) {
         const sectionId = event.urlAfterRedirects.replace('/', '');
         const el = typeof document !== 'undefined' ? document.getElementById(sectionId) : null;
-
+        console.log('fesdfdxgdfhdd',el);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth' });
         } else {
@@ -80,5 +86,5 @@ ngAfterViewInit() {
   }
 }
 
-
+const ids = ['home','about','careers','contact','expertise'];
 
