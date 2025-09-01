@@ -7,43 +7,67 @@
 
     <div class="grid gap-8 md:grid-cols-2 items-stretch">
       <div class="space-y-6">
-        <div *ngFor="let card of contactInfo; let i = index" [ngStyle]="{ 'animation-delay': (i * 0.5) + 's' }"
+        <div *ngIf="contactInfo.length > 0" [ngStyle]="{ 'animation-delay': (0 * 0.5) + 's' }"
           [class.fade-in-up]="isVisible()"
           class="bg-gray-50 text-black rounded-2xl p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
           <div class="flex flex-col flex-grow">
             <div class="mb-6 flex justify-center">
-              <img [src]="card.icon" class="w-16 h-16" />
+              <img [src]="contactInfo[0].icon" class="w-16 h-16" />
             </div>
-            <h3 class="text-xl font-semibold text-center text-black mb-4">{{ card.title }}</h3>
+            <h3 class="text-xl font-semibold text-center text-black mb-4">
+              {{ contactInfo[0].title }}
+            </h3>
             <div class="text-center text-black text-sm space-y-1 px-2">
-              <div *ngFor="let item of card.items">
+              <div *ngFor="let item of contactInfo[0].items">
                 <p>{{ item }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" *ngIf="contactInfo.length > 1">
+          <div *ngFor="let card of contactInfo.slice(1); let i = index"
+            [ngStyle]="{ 'animation-delay': ((i + 1) * 0.5) + 's' }" [class.fade-in-up]="isVisible()"
+            class="bg-gray-50 text-black rounded-2xl p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+            <div class="flex flex-col flex-grow">
+              <div class="mb-6 flex justify-center">
+                <img [src]="card.icon" class="w-16 h-16" />
+              </div>
+              <h3 class="text-xl font-semibold text-center text-black mb-4">
+                {{ card.title }}
+              </h3>
+              <div class="text-center text-black text-sm space-y-1 px-2">
+                <div *ngFor="let item of card.items">
+                  <p>{{ item }}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+
       <div class="bg-gray-50 text-black rounded-2xl p-8 shadow-md">
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-           <div>
-             <label class="block text-sm font-medium mb-1" for="name">Name</label>
-              <input id="name" type="text" formControlName="name" class="w-full border border-gray-300 rounded-md p-2" />
+            <div>
+              <label class="block text-sm font-medium mb-1" for="name">Name</label>
+              <input id="name" type="text" formControlName="name"
+                class="w-full border border-gray-300 rounded-md p-2" />
               <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
                 class="text-red-500 text-sm">
                 Name is required.
               </div>
-           </div>
-           <div class="">
-             <label class="block text-sm font-medium mb-1" for="email">Email</label>
-             <input id="email" type="email" formControlName="email"
-               class="w-full border border-gray-300 rounded-md p-2" />
-             <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
-               class="text-red-500 text-sm">
-               Enter a valid email.
-             </div>
-           </div>
+            </div>
+            <div class="">
+              <label class="block text-sm font-medium mb-1" for="email">Email</label>
+              <input id="email" type="email" formControlName="email"
+                class="w-full border border-gray-300 rounded-md p-2" />
+              <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                class="text-red-500 text-sm">
+                Enter a valid email.
+              </div>
+            </div>
           </div>
 
           <div class="mb-4">

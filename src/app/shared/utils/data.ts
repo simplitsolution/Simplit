@@ -123,11 +123,11 @@ export const contactCardDetail = [
       'Surat, Gujarat 395006'
     ]
   },
-  // {
-  //   title: 'Phone',
-  //   icon: '../../../assets/images/phone.svg',
-  //   items: ['+91 84605 50273']
-  // },
+  {
+    title: 'Phone',
+    icon: '../../../assets/images/phone.svg',
+    items: ['+91 84605 50273']
+  },
   {
     title: 'Email',
     icon: '../../../assets/images/gmail.svg',
