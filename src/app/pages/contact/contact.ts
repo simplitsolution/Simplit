@@ -6,9 +6,10 @@ import {
   inject
 } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { contactCardDetail, EMAIL_ID } from '../../shared/utils/data';
+import { contactCardDetail, EMAIL_ID, INFO_EMAIL_ID } from '../../shared/utils/data';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -56,18 +57,28 @@ export class Contact implements AfterViewInit {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      console.log('Form submitted:', this.contactForm.value);
-      const formData = this.contactForm.value;
-      const message = `
-      Name: ${formData.name}
-      Email: ${formData.email}
-      Subject: ${formData.subject}
-      Description: ${formData.description}
+     const formData = this.contactForm.value;
 
-      Please reach out to ${EMAIL_ID} email.
-      `;
-      alert(message);
-      this.contactForm.reset();
+    const message = `
+    Name: ${formData.name}
+    Email: ${formData.email}
+    Subject: ${formData.subject}
+    Description: ${formData.description}
+
+    Please reach out to ${INFO_EMAIL_ID}.
+    `;
+
+    Swal.fire({
+      text: message,
+      icon: 'info',
+      confirmButtonText: 'OK',
+      buttonsStyling: false, 
+      customClass: {
+        confirmButton: 'bg-[#e03a3c] text-white px-4 py-2 rounded-md hover:bg-red-600',
+        popup: 'text-left whitespace-pre-wrap'
+      }
+    });
+
     } else {
       this.contactForm.markAllAsTouched();
     }

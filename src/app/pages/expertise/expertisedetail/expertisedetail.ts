@@ -146,7 +146,6 @@ export class Expertisedetail implements OnInit {
           { name: 'Android', logo: 'assets/icons/android.svg' },
           { name: 'Flutter', logo: 'assets/icons/flutterio.svg' },
           { name: 'React Native', logo: 'assets/icons/react-native.svg' },
-          { name: 'Robust Backend Integration', logo: 'assets/icons/robust.svg' },
           { name: 'UX-focused Design', logo: 'assets/icons/ui-ux.png' },
         ],
       },
@@ -192,7 +191,7 @@ export class Expertisedetail implements OnInit {
 
   CARDS_PER_BATCH = 3;
   totalBatches = 1;
-  readonly SLIDE_INTERVAL = 8000;
+  readonly SLIDE_INTERVAL = 4000;
 
   private touchStartX = 0;
   private touchEndX = 0;

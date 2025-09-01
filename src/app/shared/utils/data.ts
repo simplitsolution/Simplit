@@ -1,4 +1,5 @@
 export const EMAIL_ID = 'hr@Simplit.com';
+export const INFO_EMAIL_ID = 'info@simplit.com';
 
 export const navbarDetails = [
     {
@@ -131,7 +132,7 @@ export const contactCardDetail = [
   {
     title: 'Email',
     icon: '../../../assets/images/gmail.svg',
-    items: [EMAIL_ID]
+    items: [EMAIL_ID, INFO_EMAIL_ID]
   }
 ];
 
