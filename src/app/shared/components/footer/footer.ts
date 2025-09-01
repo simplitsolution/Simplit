@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { EMAIL_ID } from '../../utils/data';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +10,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.scss'
 })
 export class Footer {
-
+  emailId = EMAIL_ID;
 }

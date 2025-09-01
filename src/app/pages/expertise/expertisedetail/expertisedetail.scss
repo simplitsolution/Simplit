@@ -1,0 +1,57 @@
+.group {
+  * {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  img {
+    will-change: transform, opacity;
+  }
+
+  p {
+    will-change: max-height, opacity;
+  }
+}
+
+[data-animation] {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.clip-path-slant {
+  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.grid > div {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img[loading="lazy"] {
+  transition: opacity 0.3s;
+  
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+button:focus-visible {
+  outline: 2px solid theme('colors.blue.500');
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    gap: 1rem;
+  }
+  
+  .group {
+    height: 300px;
+  }
+}

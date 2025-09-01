@@ -58,7 +58,6 @@ ngAfterViewInit() {
       }
       const el = typeof document !== 'undefined' ? document.getElementById(sectionId) : null;
 
-      console.log('fesdfdxgdfhdd',el,sectionId);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       } else {
@@ -73,7 +72,6 @@ ngAfterViewInit() {
       if (event instanceof NavigationEnd) {
         const sectionId = event.urlAfterRedirects.replace('/', '');
         const el = typeof document !== 'undefined' ? document.getElementById(sectionId) : null;
-        console.log('fesdfdxgdfhdd',el);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth' });
         } else {

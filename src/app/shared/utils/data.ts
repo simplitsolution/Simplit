@@ -1,3 +1,5 @@
+export const EMAIL_ID = 'hr@Simplit.com';
+
 export const navbarDetails = [
     {
         name: 'Home',
@@ -43,7 +45,7 @@ export const serviceCardsDetail = [
     sections: [
       {
         heading: 'Backend Development',
-        items: ['Node JS, Mongo-DB', 'Java Web Development', 'PHP/Laravel, MySQL']
+        items: ['Node JS, Mongo-DB', '.Net MVC', 'PHP/Laravel, MySQL']
       },
       {
         heading: 'Front End Development',
@@ -121,15 +123,15 @@ export const contactCardDetail = [
       'Surat, Gujarat 395006'
     ]
   },
-  {
-    title: 'Phone',
-    icon: '../../../assets/images/phone.svg',
-    items: ['+91 84605 50273']
-  },
+  // {
+  //   title: 'Phone',
+  //   icon: '../../../assets/images/phone.svg',
+  //   items: ['+91 84605 50273']
+  // },
   {
     title: 'Email',
     icon: '../../../assets/images/gmail.svg',
-    items: ['hr@Simplit.com']
+    items: [EMAIL_ID]
   }
 ];
 
@@ -141,3 +143,4 @@ export const perks = [
     { icon: '💼', title: 'Work Life Balance' },
     { icon: '💰', title: 'Industry Standard Pay' }
   ];
+
