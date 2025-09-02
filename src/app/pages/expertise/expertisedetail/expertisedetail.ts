@@ -147,6 +147,7 @@ export class Expertisedetail implements OnInit {
           { name: 'Flutter', logo: 'assets/icons/flutterio.svg' },
           { name: 'React Native', logo: 'assets/icons/react-native.svg' },
           { name: 'UX-focused Design', logo: 'assets/icons/ui-ux.png' },
+          { name: 'Dart', logo: 'assets/icons/dart.svg' },
         ],
       },
       seo: {
