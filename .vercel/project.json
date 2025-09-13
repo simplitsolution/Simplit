@@ -2,5 +2,5 @@
   "buildCommand": "ng build --configuration production",
   "installCommand": "npm install",
   "framework": "angular",
-  "nodeVersion": "20"
+  "nodeVersion": "22.17.1"
 }

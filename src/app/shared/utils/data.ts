@@ -1,5 +1,5 @@
-export const EMAIL_ID = 'hr@Simplit.com';
-export const INFO_EMAIL_ID = 'info@simplit.com';
+export const EMAIL_ID = 'hr@simplitsolutions.in';
+export const INFO_EMAIL_ID = 'info@simplitsolutions.in';
 
 export const navbarDetails = [
     {
@@ -127,7 +127,7 @@ export const contactCardDetail = [
   {
     title: 'Phone',
     icon: '../../../assets/images/phone.svg',
-    items: ['+91 84605 50273']
+    items: ['']
   },
   {
     title: 'Email',
